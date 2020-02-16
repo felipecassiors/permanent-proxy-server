@@ -11,6 +11,7 @@ COPY squid.conf /etc/squid/squid.conf
 
 EXPOSE 80/tcp
 
+ENV S6_LOGGING=1
 ENTRYPOINT [ "/init" ]
 
 CMD [ "squid", "-NYCd1" ]
